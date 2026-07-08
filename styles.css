@@ -1,0 +1,75 @@
+/* Curio Cove — legal/support pages. Self-contained, mobile-friendly, light + dark. */
+:root {
+  --bg: #FFF7EA;
+  --card: #FFFFFF;
+  --ink: #2E3A46;
+  --muted: #5C6A78;
+  --amber: #E8892B;
+  --sky: #6BB8FF;
+  --line: rgba(46, 58, 70, 0.12);
+  --shadow: 0 10px 30px rgba(46, 58, 70, 0.08);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171B21;
+    --card: #1F252D;
+    --ink: #E9EEF3;
+    --muted: #A6B2BF;
+    --amber: #F6A94C;
+    --sky: #7FC0FF;
+    --line: rgba(233, 238, 243, 0.14);
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #BFE3FF 0%, var(--bg) 34%, var(--bg) 100%);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 17px;
+}
+@media (prefers-color-scheme: dark) {
+  body { background: linear-gradient(180deg, #24313F 0%, var(--bg) 34%, var(--bg) 100%); }
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 28px 20px 64px; }
+header.hero { text-align: center; padding: 26px 0 10px; }
+header.hero .lantern { font-size: 52px; line-height: 1; }
+header.hero h1 { margin: 10px 0 2px; font-size: 30px; font-weight: 800; letter-spacing: -0.02em; }
+header.hero h1 .cove { color: var(--amber); }
+header.hero .sub { color: var(--muted); font-weight: 600; margin: 0; }
+nav.links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 18px 0 4px; }
+nav.links a {
+  text-decoration: none; color: var(--ink); background: var(--card);
+  border: 1.5px solid var(--line); border-radius: 999px;
+  padding: 8px 16px; font-weight: 700; font-size: 15px; box-shadow: var(--shadow);
+}
+main {
+  background: var(--card); border: 1.5px solid var(--line); border-radius: 22px;
+  box-shadow: var(--shadow); padding: 8px 24px 28px; margin-top: 18px; overflow-wrap: break-word;
+}
+main .eyebrow { color: var(--muted); font-weight: 700; font-size: 14px; margin-top: 22px; }
+h2 { font-size: 21px; font-weight: 800; margin: 30px 0 8px; letter-spacing: -0.01em; }
+h2:first-of-type { margin-top: 18px; }
+p { margin: 10px 0; }
+ul { margin: 10px 0; padding-left: 22px; }
+li { margin: 7px 0; }
+strong { font-weight: 800; }
+a { color: var(--amber); font-weight: 700; }
+hr { border: none; border-top: 1.5px solid var(--line); margin: 26px 0; }
+blockquote {
+  margin: 14px 0; padding: 12px 16px; background: rgba(107, 184, 255, 0.10);
+  border-left: 4px solid var(--sky); border-radius: 10px; color: var(--ink);
+}
+.badge {
+  display: inline-block; background: rgba(232, 137, 43, 0.14); color: var(--amber);
+  border-radius: 999px; padding: 4px 12px; font-weight: 800; font-size: 14px;
+}
+footer.site { text-align: center; color: var(--muted); font-size: 14px; margin-top: 26px; }
+footer.site a { color: var(--muted); }
+.contact-card {
+  background: rgba(107, 184, 255, 0.10); border: 1.5px solid var(--line);
+  border-radius: 16px; padding: 16px 18px; margin-top: 12px;
+}
